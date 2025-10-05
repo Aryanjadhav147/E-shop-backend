@@ -122,9 +122,12 @@ app.post("/login", async (req, res) => {
 });
 
 // Admin Dashboard
-app.get("/admin", checkAdmin, (req, res) => {
-  res.json({ message: "Welcome Admin Dashboard" });
+aapp.get("/api/admin/orders", checkAdmin, async (req, res) => {
+  const orders = await getAllOrdersFromDB(); // example
+  res.json(orders);
 });
+
+
 
 // --------- PRODUCTS ROUTES ---------
 app.get("/products", async (req, res) => {
@@ -223,7 +226,7 @@ app.get("/orders/:userId", async (req, res) => {
 });
 
 // --------- ADMIN ORDERS ---------
-app.use("/api/admin", ordersRouter);
+app.use("/api/admin/orders", ordersRouter);
 
 // --------- START SERVER ---------
 const PORT = process.env.PORT || 3200;
