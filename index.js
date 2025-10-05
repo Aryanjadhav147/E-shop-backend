@@ -122,7 +122,7 @@ app.post("/login", async (req, res) => {
 });
 
 // Admin Dashboard
-aapp.get("/api/admin/orders", checkAdmin, async (req, res) => {
+app.get("/api/admin/orders", checkAdmin, async (req, res) => {
   const orders = await getAllOrdersFromDB(); // example
   res.json(orders);
 });
