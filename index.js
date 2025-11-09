@@ -30,7 +30,7 @@ const app = express();
 // ------------------ 🔹 CORS SETUP ------------------
 const allowedOrigins = [
   "http://localhost:5173", // frontend dev
-  process.env.FRONTEND_URL, // production (optional)
+ "https://aryan-eshop.vercel.app", // production (optional)
 ];
 
 app.use(
