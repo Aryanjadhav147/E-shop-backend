@@ -6,8 +6,9 @@
   "author": "",
   "type": "module",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+   "scripts": {
+    "start": "node payment.js",
+    "dev": "nodemon payment.js"
   },
   "dependencies": {
     "bcryptjs": "^3.0.2",
